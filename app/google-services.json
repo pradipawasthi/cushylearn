@@ -10,7 +10,7 @@
       "client_info": {
         "mobilesdk_app_id": "1:405363962571:android:82bde055eab4ec04",
         "android_client_info": {
-          "package_name": "com.manish.chushylearn"
+          "package_name": "com.pradip.cushylearn"
         }
       },
       "oauth_client": [
@@ -18,7 +18,7 @@
           "client_id": "405363962571-a42g0jcuvkposuoc3l5v7rtaubjnfgg8.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.manish.chushylearn",
+            "package_name": "com.pradip.cushylearn",
             "certificate_hash": "ae4110728beccb10edf85089b9d6a58533d6f54a"
           }
         },

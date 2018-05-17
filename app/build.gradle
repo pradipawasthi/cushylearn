@@ -19,7 +19,7 @@ android {
     useLibrary 'org.apache.http.legacy'
 
     defaultConfig {
-        applicationId "com.manish.chushylearn"
+        applicationId "com.pradip.cushylearn"
         minSdkVersion 19
         targetSdkVersion 24
         versionCode 1

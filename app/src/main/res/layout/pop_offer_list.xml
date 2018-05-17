@@ -1,0 +1,80 @@
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_view"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    card_view:cardUseCompatPadding="true"
+    card_view:cardCornerRadius="4dp"
+    card_view:cardElevation="4dp">
+
+    <RelativeLayout
+        android:layout_width="170dp"
+        android:layout_height="196dp"
+        android:padding="4dp"
+        android:background="@color/md_yellow_100"
+        >
+
+        <ImageView
+            android:id="@+id/sub_img_display"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="sfsjfskdfskdfsdfksd"
+            android:scaleType="centerCrop"
+            android:src="@drawable/p_milian"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+        <TextView
+            android:id="@+id/sub_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/sub_img_display"
+            android:layout_alignLeft="@+id/sub_img_display"
+            android:inputType="text"
+            android:layout_marginTop="8dp"
+            android:paddingBottom="2dip"
+            android:paddingTop="6dip"
+            android:text="Subject name"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            />
+
+        <TextView
+            android:id="@+id/sub_lesson"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/sub_name"
+            android:layout_alignLeft="@+id/sub_name"
+            android:text="lesson name"
+            android:textSize="12sp"
+            android:paddingBottom="2dip"
+            android:textColor="@color/black"
+            android:layout_marginTop="4dp"/>
+        <TextView
+            android:id="@+id/sub_des"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/sub_lesson"
+            android:layout_alignLeft="@+id/sub_lesson"
+            android:text="descriptions"
+            android:textSize="12sp"
+            android:paddingBottom="2dip"
+            android:textColor="@color/md_red_900"
+            android:layout_marginTop="4dp"/>
+        <TextView
+            android:id="@+id/sub_loc_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/sub_des"
+            android:text="location Name"
+            android:textSize="12sp"
+            android:paddingBottom="2dip"
+            android:textColor="#5d5"
+            android:layout_marginTop="4dp"/>
+
+
+    </RelativeLayout>
+</android.support.v7.widget.CardView>

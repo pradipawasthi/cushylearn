@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "405363962571",
+    "firebase_url": "https://chushylearn2017.firebaseio.com",
+    "project_id": "chushylearn2017",
+    "storage_bucket": "chushylearn2017.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:405363962571:android:82bde055eab4ec04",
+        "android_client_info": {
+          "package_name": "com.manish.chushylearn"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "405363962571-a42g0jcuvkposuoc3l5v7rtaubjnfgg8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.manish.chushylearn",
+            "certificate_hash": "ae4110728beccb10edf85089b9d6a58533d6f54a"
+          }
+        },
+        {
+          "client_id": "405363962571-a69ke0on7pbdbvd8u1e7apa7o5cl5ual.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDwTADjvkFYM3pyd5tIuUjhBDUt9yNVr5w"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "405363962571-a69ke0on7pbdbvd8u1e7apa7o5cl5ual.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

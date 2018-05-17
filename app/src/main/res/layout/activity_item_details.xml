@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_item_details"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context="com.appiva.rb.ezmap.Activities.ItemDetailsActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_already"
+        android:layout_width="match_parent"
+        android:background="@color/primary"
+        android:layout_height="56dp"
+
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:textSize="18sp"
+                android:text="Item Details"
+                android:textColor="@color/colorTextPrimary"
+                />
+
+            <ImageView
+                android:id="@+id/add_item"
+                android:src="@drawable/ic_done_white"
+                android:paddingLeft="20dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:clickable="true"
+                android:visibility="visible"
+                android:layout_marginRight="20dp"
+
+
+                />
+
+
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+
+        <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/scroll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/toolbar_already"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/default_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    android:text="Please Select a Category:" />
+
+                <RelativeLayout
+                    android:id="@+id/spinner_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/default_text"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight=".28"
+                    android:background="@drawable/category_spinner_background"
+                    android:orientation="horizontal"
+                    tools:layout_marginBottom="2dp">
+
+                    <TextView
+                        android:id="@+id/labelMultiSpinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="10dp"
+                        android:gravity="center_vertical"
+                        android:textColor="#000000" />
+
+
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center"
+                        android:src="@drawable/spinner_drop" />
+                    <com.appiva.rb.ezmap.Adapters.EzMultispinner
+                        android:id="@+id/category_spinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:background="@android:color/transparent"
+                        android:gravity="center"
+                        android:spinnerMode="dropdown"
+
+                        />
+                </RelativeLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/input_layout_itemname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/spinner_layout"
+                    android:layout_marginTop="10dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:textColorHint="@color/secondary_text">
+
+                    <EditText
+                        android:id="@+id/input_itemname"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint=" Enter the name of Item "
+                        android:inputType="textEmailAddress"
+                        android:textColor="@color/secondary_text" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/input_layout_quantity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/input_layout_itemname"
+                    android:layout_marginTop="10dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:textColorHint="@color/secondary_text">
+
+                    <EditText
+                        android:id="@+id/input_quantity"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint=" Enter the Quantity in dozens, kilo, pieces "
+                        android:inputType="textEmailAddress"
+                        android:textColor="@color/secondary_text" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/input_layout_sellingPrice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/input_layout_quantity"
+                    android:layout_marginTop="10dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:textColorHint="@color/secondary_text">
+
+                    <EditText
+                        android:id="@+id/input_sellingPrice"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint=" Enter the Selling Price of Item "
+                        android:inputType="textEmailAddress"
+                        android:textColor="@color/secondary_text" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/input_layout_marketPrice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/input_layout_sellingPrice"
+                    android:layout_marginTop="10dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:textColorHint="@color/secondary_text">
+
+                    <EditText
+                        android:id="@+id/input_marketingPrice"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint=" Enter the Market Price of Item "
+                        android:inputType="textEmailAddress"
+                        android:textColor="@color/secondary_text" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/input_layout_availablestatus"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/input_layout_marketPrice"
+                    android:layout_marginTop="10dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:textColorHint="@color/secondary_text">
+
+                    <EditText
+                        android:id="@+id/input_availablestatus"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Enter the Number of available items"
+                        android:inputType="textEmailAddress"
+                        android:textColor="@color/secondary_text" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/input_layout_itemfeedback"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/input_layout_availablestatus"
+                    android:layout_marginTop="10dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:textColorHint="@color/secondary_text">
+
+                    <EditText
+                        android:id="@+id/input_itemquality"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Quality of item good, very good, avearage"
+                        android:inputType="textEmailAddress"
+                        android:textColorHint="@color/secondary_text" />
+
+                </LinearLayout>
+
+
+
+
+                <LinearLayout
+                    android:id="@+id/layout_uploadpic"
+                    android:layout_below="@+id/input_layout_itemfeedback"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    >
+
+                    <TextView
+
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:textColor="@color/md_black_1000"
+                        android:text="Upload Image"/>
+
+                    <TextView
+                        android:layout_weight="1"
+                        android:id="@+id/select_image"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Select Image"
+                        android:clickable="true"
+                        android:textColor="@color/primary"
+
+                        />
+
+                    <CheckBox
+                        android:id="@+id/show_uploaded_img"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:layout_height="wrap_content"
+                        android:text="Uploaded"
+                        android:clickable="false"
+                        />
+                </LinearLayout>
+            </RelativeLayout>
+
+        </ScrollView>
+<!--
+        <Button
+
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.4"
+            android:elevation="10dp"
+            android:background="@color/primary"
+            android:clickable="true"
+
+
+            android:text="Add Item"
+            android:textColor="#FFFFFF"
+            android:textSize="17sp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:id="@+id/duplicate"
+
+            android:layout_gravity="center_vertical"
+
+
+            android:gravity="center_horizontal"
+
+            android:visibility="invisible"
+            android:paddingTop="20dp"
+
+            />
+
+    <Button
+        android:id="@+id/btn_select_location"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.4"
+        android:elevation="10dp"
+        android:background="@color/primary"
+        android:clickable="true"
+        android:layout_marginTop="20dp"
+        android:text="Add Item"
+        android:textColor="#FFFFFF"
+        android:textSize="17sp"
+        android:layout_alignBaseline="@+id/duplicate"
+        android:layout_alignBottom="@+id/duplicate"
+        android:layout_alignParentStart="true" />
+-->
+
+</RelativeLayout>

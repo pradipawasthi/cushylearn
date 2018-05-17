@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_location_details"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.manish.chushylearn.Activities.LocationDetailsActivity"
+    >
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_already"
+        android:layout_width="match_parent"
+        android:background="@color/primary"
+        android:layout_height="56dp"
+
+        app:theme="@style/ToolbarStyle"
+       >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:textSize="18sp"
+        android:text="Subject Details"
+        android:textColor="@color/md_white_1000"
+        android:textStyle="bold"
+        />
+    </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+
+
+
+   <ImageView
+        android:id="@+id/img"
+        android:paddingTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="225dp"
+        android:src="@drawable/doubly"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="20dp"
+        >
+    <TextView
+        android:layout_width="0dp"
+        android:layout_weight="0.5"
+        style="@style/detailsview"
+        android:id="@+id/name_head"
+        android:textStyle="bold"
+        android:text="Subject Name : " />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            style="@style/detailsview"
+            android:id="@+id/subname"
+
+            android:text="Data Structure" />
+<!--
+    <TextView
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        style="@style/detailsview"
+        android:id="@+id/name"
+        tools:text="Data Structure" /> -->
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="0.5"
+            style="@style/detailsview"
+            android:id="@+id/details_head"
+            android:textStyle="bold"
+            android:text="Lesson Name : " />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            style="@style/detailsview"
+            android:id="@+id/lname"
+
+            android:text="Link List" />
+    </LinearLayout>
+
+      <LinearLayout
+
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content">
+          <TextView
+              android:layout_width="0dp"
+              android:layout_weight="0.5"
+              style="@style/detailsview"
+              android:id="@+id/rating_head"
+              android:textStyle="bold"
+              android:text="Topic Name : " />
+          <TextView
+              android:layout_width="0dp"
+              android:layout_weight="1"
+              style="@style/detailsview"
+              android:id="@+id/tname"
+
+              android:text="Doubly Link List" />
+      </LinearLayout>
+
+     <LinearLayout
+
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content">
+         <TextView
+             android:layout_width="0dp"
+             android:layout_weight="0.5"
+             style="@style/detailsview"
+             android:id="@+id/category_head"
+             android:textStyle="bold"
+             android:text="Question : " />
+         <TextView
+             android:layout_width="0dp"
+             android:layout_weight="1"
+             style="@style/detailsview"
+             android:id="@+id/ques"
+
+             android:text="what is Doubly link list" />
+     </LinearLayout>
+   <LinearLayout
+
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content">
+       <TextView
+           android:layout_width="0dp"
+           android:layout_weight="0.5"
+           style="@style/detailsview"
+           android:id="@+id/feedback_head"
+           android:textStyle="bold"
+           android:text="Answer : " />
+
+</LinearLayout>
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            style="@style/detailsview"
+            android:id="@+id/ans"
+
+            android:text="In computer science, a doubly linked list is a linked data structure that consists of a set of sequentially linked records called nodes. Each node contains two fields, called links, that are references to the previous and to the next node in the sequence of nodes."
+            />
+
+   </LinearLayout>
+
+
+
+</LinearLayout>

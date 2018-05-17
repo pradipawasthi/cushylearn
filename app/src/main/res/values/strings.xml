@@ -1,0 +1,168 @@
+<resources>
+    <string name="app_name">CushyLearn</string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="title_activity_main_map">MainMapActivity</string>
+
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+
+    <string name="facebook_app_id">652033254971308</string>
+
+    <string name="action_settings">Settings</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string-array name="groups">
+        <item name="public">Public</item>
+        <item name="private">Private</item>
+    </string-array>
+
+    <string-array name="Categories">
+        <item name="Transportation"> Transportation</item>
+
+        <item name="Car Service">Car Service</item>
+        <item name="Professional">Professional</item>
+        <item name="Public">Public</item>
+        <item name="Shopping">Shopping</item>
+        <item name="Services">Services</item>
+        <item name="Food/Drinks">Food/Drinks</item>
+        <item name="Entertainment">Entertainment</item>
+        <item name="Lodging">Lodging</item>
+        <item name="Others">Others</item>
+    </string-array>
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="mapmyindiawebkey">AIzaSyDD3bbcGJpfcCqROUBpvjF1mSEhqB6u3Yo </string>
+    <!--<string name="mapmyindiaintrkey">113gknfneomdemmhffbxuxkctdp2hhhh</string>  -->
+
+
+    <!-- Category name for the vocabulary words for family members [CHAR LIMIT=20] -->
+    <string name="category_uber">Uber</string>
+    <string name="category_radiotaxi">Radio Taxi</string>
+    <string name="category_ola">OLA</string>
+    <string name="category_airport_taxi">Airport Taxi</string>
+    <string name="title_activity_location_details">LocationDetailsActivity</string>
+
+
+    <string name="permission_write_external_rationale">Allow access external storage to select images</string>
+
+    <string name="ok">OK</string>
+    <string name="done">DONE</string>
+    <string name="camera">CAMERA</string>
+    <string name="image_directory">Camera</string>
+<!--
+    <string name="title_folder">Folder</string>
+    <string name="title_select_image">Tap to select images</string>
+    <string name="title_permission_denied">Permission denied</string>
+-->
+    <string name="selected">%d selected</string>
+    <string name="selected_with_limit">%1$d/%2$d selected</string>
+
+    <string name="error_create_image_file">Failed to create image file</string>
+    <string name="error_no_camera">No camera found</string>
+    <string name="error_null_cursor">Oops, something went wrong!</string>
+
+    <string name="msg_empty_images">No images found</string>
+    <string name="msg_no_write_external_permission">Please grant storage permission to select images</string>
+    <string name="msg_no_camera_permission">Please grant camera permission to capture image</string>
+    <string name="msg_limit_images">Image selection limit</string>
+    <string name="title_activity_offers_list">OffersListActivity</string>
+
+    <string name="offer_settings">Settings</string>
+
+    <string name="hintTxtItem">Enter Topic name here ...</string>
+    <string name="lblBtnAdd">Add</string>
+    <string name="txtEmpty">Topic list is empty</string>
+    <string name="lblBtnDel">Del</string>
+    <string name="offeradd">Add Offer</string>
+
+
+    // Camera
+
+    <string name="cam_fail">Failed to take picture</string>
+    <string name="cam_success">Picture saved</string>
+    <string name="cam_start">Take a picture, then choose it as attachment.</string>
+
+
+    //File chooser
+
+    <string name="title_choose">Choose</string>
+    <string name="dialog_cancel">Cancel</string>
+    <string name="choose_att">Change Image</string>
+    <string name="choose_att_loc">Change Location Image</string>
+
+    <string name="title_hint">Enter your Problem/question Here</string>
+    <string name="text_hint">Content</string>
+
+    <string name="toast_install_app">Please install an app to perform action.</string>
+
+
+    // Goal
+
+    <string name="goal_cancel">Cancel</string>
+    <string name="action_image">Picture</string>
+    <string name="action_imageLoad">Load image</string>
+    <string name="action_imageRotate">Rotate image</string>
+    <string name="action_imageDelete">Delete image</string>
+    <string name="costs">Costs:</string>
+    <string name="alreadySaved">Already saved:</string>
+    <string name="costsRemaining">Remaining:</string>
+    <string name="paste_date">Paste actual date</string>
+    <string name="paste_time">Paste actual time</string>
+    <string name="paste_line">Paste line</string>
+
+    <string name="text_tit_1">Neutral</string>
+    <string name="text_tit_2">Happy</string>
+    <string name="text_tit_3">Sad</string>
+    <string name="text_tit_4">Smiling</string>
+    <string name="text_tit_5">Cool</string>
+    <string name="text_tit_6">Dead</string>
+    <string name="text_tit_7">Excited</string>
+    <string name="text_tit_8">Tongue</string>
+    <string name="text_tit_9">Devil</string>
+
+    // Notes
+
+    <string name="note_delete_confirmation">All entries will be deleted. OK?</string>
+    <string name="note_remove_confirmation">Entry will be romoved. OK?</string>
+    <string name="note_remove_cannot">You need at least one entry!</string>
+    <string name="note_remove_note">Delete entry</string>
+    <string name="note_edit">Edit entry</string>
+    <string name="note_share">Share entry</string>
+    <string name="note_share_2">Share with:</string>
+
+
+    <string name="toast_extension">No supported file extension</string>
+
+    <string name="action_note">New diary entry</string>
+    <string name="note_attachment">Attachment</string>
+
+
+    // permissions
+    <string name="yes">OK</string>
+    <string name="no">NO</string>
+    <string name="app_permissions_title">Used permission</string>
+    <string name="app_permissions">
+
+        &lt;i>Access Storage Permission:&lt;/i>&lt;br>
+        &#8226; Diary: backup and restore to/from sd-card.&lt;br>
+        &#8226; Goal: load and save images for your personal goal.&lt;br>&lt;br>
+
+        &lt;i>Grant permissions later:&lt;/i>&lt;br>
+        If you don\'t permit this now, you can do it later. Please open then \"Settings -> App info\" and choose \"Permissions\".</string>
+
+
+    //popupfiles
+    <string name="toast_directory">Can\'t open Directory.</string>
+    <string name="toast_newTitle">Title already exists.</string>
+    <string name="toast_notSave">Can not save entry.</string>
+
+    <string name="toast_files">No files in directory.</string>
+    <string name="toast_delete">All entries will be deleted.</string>
+    <string name="title_activity_edit_profile">EditProfileActivity</string>
+
+    <string name="title_folder">Folder</string>
+    <string name="title_select_image">Tap to select images</string>
+    <string name="title_permission_denied">Permission denied</string>
+
+
+</resources>

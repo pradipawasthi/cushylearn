@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollView"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:context="de.baumann.quitsmoking.MainActivity"
+        android:foregroundGravity="center"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="false"
+        android:layout_alignParentBottom="false"
+        android:layout_centerInParent="true"
+        tools:ignore="UselessParent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/muti_autoedittext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_horizontal_margin"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="20dp"
+                app:passwordToggleEnabled="false"
+                >
+
+                <AutoCompleteTextView
+                    android:id="@+id/autotext1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="20"
+                    android:hint="Enter Chapter Name here........." >
+
+                    <requestFocus />
+                </AutoCompleteTextView>
+            </android.support.design.widget.TextInputLayout>
+
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/lt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_horizontal_margin"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="20dp"
+                app:passwordToggleEnabled="false"
+                android:layout_below="@+id/muti_autoedittext"
+                >
+
+                <EditText
+                    android:id="@+id/ques_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/title_hint"
+                    android:inputType="textCapSentences|textMultiLine" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/layout_cont4"
+                android:layout_marginEnd="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_width="match_parent"
+                android:layout_below="@+id/lt"
+                android:layout_height="wrap_content"
+                app:passwordToggleEnabled="false">
+
+                <EditText
+                    android:id="@+id/note_text_input4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Description/Solution"
+                    android:inputType="textCapSentences|textMultiLine"
+                    android:lines="4"
+                    />
+
+            </android.support.design.widget.TextInputLayout>
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/ll"
+                android:layout_below="@+id/layout_cont4"
+                android:layout_marginTop="@dimen/activity_horizontal_margin"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="20dp"
+                android:orientation="horizontal"
+
+                >
+
+
+            <RadioButton
+                android:id="@+id/switch2"
+                android:layout_width="0dp"
+                android:layout_weight="0.84"
+                android:layout_height="wrap_content"
+                android:textColor="@color/primary"
+                android:gravity="center"
+                android:checked="true"
+                android:text="Image"
+
+
+                />
+
+            <RadioButton
+                android:id="@+id/switch3"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Pdf"
+                android:textColor="@color/primary"
+                android:checked="false"
+
+                />
+            <RadioButton
+                android:id="@+id/switch4"
+
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:layout_height="wrap_content"
+                android:text="Videos"
+                android:textColor="@color/primary"
+                android:checked="false"
+
+                />
+
+        </RadioGroup>
+
+
+
+
+    <!--
+                <Button
+                    android:id="@+id/textviewA"
+                    android:layout_width="wrap_content"
+                    android:layout_height="46dp"
+                    android:text="Choose Attachment"
+                    android:layout_below="@+id/layout_cont5"
+                    android:layout_alignStart="@+id/layout_cont5"
+                    android:layout_toStartOf="@+id/button_rem"
+                    android:gravity="center_vertical"
+                    android:layout_marginStart="4dp"
+                    android:background="?android:selectableItemBackground"
+                    />
+    -->
+            <Button
+                android:id="@+id/button"
+                android:layout_width="wrap_content"
+                android:layout_height="46dp"
+                android:text="Choose Attachment"
+                android:background="?android:selectableItemBackground"
+                tools:ignore="ContentDescription"
+                android:scaleType="fitCenter"
+                android:layout_below="@+id/ll"
+                android:layout_marginEnd="20dp"
+                android:layout_marginStart="20dp"
+                android:clickable="true"
+
+                />
+
+            <ImageButton
+                android:id="@+id/button_rem"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                app:srcCompat="@drawable/close_red"
+                android:background="?android:selectableItemBackground"
+                tools:ignore="ContentDescription"
+                android:scaleType="fitCenter"
+                android:layout_alignBottom="@+id/button"
+                android:layout_alignEnd="@+id/ll"
+                android:layout_alignTop="@+id/button" />
+
+            <ImageButton
+                android:id="@+id/button_cam"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                app:srcCompat="@drawable/camera"
+                android:background="?android:selectableItemBackground"
+                tools:ignore="ContentDescription"
+                android:scaleType="fitCenter"
+                android:layout_alignBottom="@+id/button"
+                android:layout_alignEnd="@+id/ll"
+                android:layout_alignTop="@+id/button" />
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:orientation="horizontal"
+                android:layout_below="@+id/button_cam"
+                android:layout_alignEnd="@+id/button_rem">
+
+                <Button
+                    android:id="@+id/actionCancel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:text="Cancel"/>
+
+
+                <Button
+                    android:id="@+id/actionOk"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:background="@android:color/transparent"
+                    android:text="OK"/>
+
+            </LinearLayout>
+
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+</RelativeLayout>

@@ -1,0 +1,120 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="fill_parent">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_already"
+        android:layout_width="match_parent"
+        android:background="@color/primary"
+        android:layout_height="56dp"
+
+        app:theme="@style/ToolbarStyle"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:textSize="18sp"
+                android:text="Select location from Map"
+                android:textColor="@color/md_white_1000"
+                android:textStyle="bold"
+                />
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_weight="4"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btn_select_location">
+        <fragment
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            tools:context="com.viralandroid.googlemapsandroidapi.MapsActivity" />
+        <LinearLayout
+            android:background="@color/md_white_1000"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:orientation="horizontal">
+
+
+
+            <EditText
+
+                android:id="@+id/editText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:hint="Search Location Here"
+                />
+
+
+            <Button
+                android:id="@+id/search_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:onClick="onMapSearch"
+                android:text="Search" />
+
+        </LinearLayout>
+
+
+
+    </RelativeLayout>
+    <Button
+        android:id="@+id/btn_select_location"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.4"
+        android:elevation="10dp"
+        android:background="@color/primary"
+        android:clickable="true"
+
+        android:text="Select Location"
+        android:textColor="#FFFFFF"
+        android:textSize="17sp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true" />
+
+
+
+
+    <!--
+        <fragment
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+        <Button
+            android:id="@+id/btn_select_location"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/input_layout_login_password"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="35dp"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/ripple_effect_register"
+            android:clickable="true"
+            android:layout_marginBottom="10dp"
+            android:elevation="10dp"
+            android:gravity="center_horizontal"
+            android:text="Select Location"
+            android:paddingTop="13dp"
+            android:textColor="#FFFFFF"
+            android:textSize="17sp" />   -->
+</RelativeLayout>

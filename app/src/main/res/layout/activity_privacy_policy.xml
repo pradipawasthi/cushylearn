@@ -1,0 +1,58 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.manish.chushylearn.Activities.PrivacyPolicyActivity">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_already"
+        android:layout_width="match_parent"
+        android:background="@color/primary"
+        android:layout_height="56dp"
+
+        app:theme="@style/ToolbarStyle"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:textSize="18sp"
+                android:text="Privacy policy"
+                android:textColor="@color/md_white_1000"
+                android:textStyle="bold"
+                />
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="11dp">
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            app:srcCompat="@drawable/default_construction"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/default_construction_img" />
+
+        <TextView
+            android:text="What is worth having is worth waiting for"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/default_text"
+            android:gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/default_construction_img"
+            />
+    </RelativeLayout>
+
+</RelativeLayout>

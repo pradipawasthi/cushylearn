@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_alignParentTop="true"
+                android:layout_centerVertical="true"
+                android:id="@+id/image"
+                android:gravity="center">
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/imageVw"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:background="@drawable/planet"
+                    app:civ_border_width="0dp"
+                    android:clickable="true"
+                    app:civ_border_color="#FF000000"/>
+                <!--ImageView
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="18dp"
+                    android:src="@drawable/offers"
+                    android:id="@+id/imageVw"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:clickable="true"
+
+                    /-->
+                <TextView
+                    android:text="@string/choose_att"
+                    android:layout_below="@+id/imageVw"
+                    android:layout_width="wrap_content"
+                    android:layout_height="46dp"
+                    android:id="@+id/button_attG"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:background="?android:selectableItemBackground"
+                    android:gravity="center_vertical"
+                    android:layout_marginStart="4dp"
+                    android:textColor="@color/primary"
+                    android:clickable="true"
+                    />
+            </LinearLayout>
+
+
+
+<!--
+            <LinearLayout
+                android:id="@+id/input_layout_oname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/button_attG"
+                android:layout_marginTop="5dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:textColorHint="@color/secondary_text">
+
+                <MultiAutoCompleteTextView
+                    android:id="@+id/autotext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="20"
+                    android:hint="Enter Category here........." >
+
+                    <requestFocus />
+                </MultiAutoCompleteTextView>
+
+            </LinearLayout>
+            -->
+
+            <LinearLayout
+                android:id="@+id/input_layout_multi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/image"
+                android:layout_marginTop="5dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:textColorHint="@color/secondary_text">
+                <EditText
+                    android:id="@+id/input_oname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:hint="Enter the Name of Subject"
+                    android:inputType="textEmailAddress"
+                    android:textColor="@color/secondary_text" />
+
+                </LinearLayout>
+            <LinearLayout
+                android:id="@+id/input_layout_lesson"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/input_layout_multi"
+                android:layout_marginTop="5dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:textColorHint="@color/secondary_text">
+
+                <EditText
+                    android:id="@+id/input_lessonName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Lesson Name"
+
+                    android:inputType="textEmailAddress"
+                    android:textColor="@color/secondary_text" />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/input_layout_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/input_layout_lesson"
+                android:layout_marginTop="5dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:textColorHint="@color/secondary_text">
+
+                <EditText
+                    android:id="@+id/input_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Description"
+
+                    android:inputType="textMultiLine"
+                    android:textColor="@color/secondary_text" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:id="@+id/location_txt"
+                android:layout_below="@+id/input_layout_description"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:text="Select your Location"
+                android:textColor="@color/primary"
+                android:clickable="true"
+                />
+            <RelativeLayout
+                android:id="@+id/spinner_layout_location"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/location_txt"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight=".28"
+                android:background="@drawable/category_spinner_background"
+                android:orientation="horizontal">
+
+                <Spinner
+                    android:id="@+id/location_spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="5dp"
+                    android:background="@android:color/transparent"
+                    android:gravity="center"
+                    android:spinnerMode="dropdown" />
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:src="@drawable/spinner_drop" />
+
+            </RelativeLayout>
+
+
+<!--
+            <LinearLayout
+                android:id="@+id/location_layout"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/spinner_layout_location"
+                android:layout_marginBottom="10dp"
+                >
+
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/input_layout_location"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/spinner_layout"
+                    android:layout_marginTop="5dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:textColorHint="@color/secondary_text">
+
+
+                    <EditText
+                        android:id="@+id/input_loc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Location Coordinates"
+                        android:inputType="textMultiLine"
+                        android:textColor="@color/secondary_text"
+                        android:layout_marginTop="3dp"
+
+
+
+                        />
+
+                </android.support.design.widget.TextInputLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:id="@+id/select_location_text"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:text="Select from Map"
+                    android:textColor="@color/primary"
+                    android:clickable="true"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/checkbox_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/location_layout"
+                android:layout_marginBottom="2dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="2dp">
+
+                <CheckBox
+                    android:id="@+id/current_shop_location"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Use My Current Location" />
+
+            </LinearLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/input_layout_detail_place"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/checkbox_layout"
+                android:layout_marginTop="5dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:textColorHint="@color/secondary_text">
+
+                <EditText
+                    android:id="@+id/input_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Address"
+
+                    android:inputType="textMultiLine"
+
+                    android:textColor="@color/secondary_text"
+                    android:layout_marginTop="1dp" />
+
+            </android.support.design.widget.TextInputLayout>
+
+-->
+            <EditText
+                android:id="@+id/txtItem"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+
+
+                android:inputType="text"
+                android:layout_below="@+id/spinner_layout_location"
+                android:hint="@string/hintTxtItem"
+                />
+
+            <Button
+                android:id="@+id/btnAdd"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:text="@string/lblBtnAdd"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+
+                android:layout_toRightOf="@id/txtItem"
+                android:layout_below="@+id/spinner_layout_location"
+                />
+            <!--android:layout_toRightOf="@id/txtItem" />
+
+    <Button
+        android:id="@+id/btnDel"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="20dp"
+        android:layout_toRightOf="@+id/btnAdd"
+        android:layout_below="@+id/input_layout_detail_place"
+        android:text="@string/lblBtnDel"/>
+                                -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:id="@+id/hint_del"
+                android:layout_marginLeft="20dp"
+                android:layout_below="@id/txtItem"
+                android:text="Topic added in this Lesson are .........."
+                android:textColor="@color/primary"
+                />
+            <TextView
+                android:id="@android:id/empty"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/hint_del"
+                android:text="@string/txtEmpty"
+                android:gravity="center_horizontal"
+                />
+
+            <ListView
+                android:id="@+id/topics"
+                android:layout_marginLeft="20dp"
+                android:layout_width="fill_parent"
+                android:layout_height="120dp"
+                android:layout_below="@+id/hint_del"
+                android:choiceMode="multipleChoice" >
+            </ListView>
+
+
+
+
+
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>
